@@ -67,8 +67,8 @@ function Navbar() {
             cursor: 'pointer',
             color: theme.primary,
             position: 'absolute',
-            right: 40,
-            top: 40,
+            right: 30,
+            top: 25,
             transition: 'color 0.2s',
             '&:hover': {
                 color: theme.tertiary,
@@ -79,7 +79,7 @@ function Navbar() {
             },
         },
         drawerItem: {
-            margin: '2rem auto',
+            margin: '1.7rem auto',
             borderRadius: '78.8418px',
             background: theme.secondary,
             color: theme.primary,
@@ -133,10 +133,12 @@ function Navbar() {
     return (
         <div className='navbar'>
             <div className='navbar--container'>
-                <h1 style={{ color: theme.secondary }}>
-                    {shortname(headerData.name)}
-                </h1>
-
+                <div className='logo'>
+                    <img src={headerData.logoH} alt="" />
+                    <h1 style={{ color: theme.secondary }}>
+                        {shortname(headerData.name)}
+                    </h1>
+                </div>
                 <IoMenuSharp
                     className={classes.navMenu}
                     onClick={handleDrawerOpen}
@@ -212,21 +214,15 @@ function Navbar() {
                         </Fade>
 
                         <Fade left>
-                            <NavLink
-                                to='/#resume'
-                                smooth={true}
-                                spy='true'
-                                duration={2000}
-                            >
-                                <div className={classes.drawerItem}>
-                                    <HiDocumentText
-                                        className={classes.drawerIcon}
-                                    />
-                                    <span className={classes.drawerLinks}>
-                                        Resume
-                                    </span>
-                                </div>
-                            </NavLink>
+                            <a className={classes.drawerItem}
+                                href="https://drive.google.com/file/d/1RsYrIR3D4ZBDUweDBmTIlVi4rGk6BVBg/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+                                <HiDocumentText
+                                    className={classes.drawerIcon}
+                                />
+                                <span className={classes.drawerLinks}>
+                                    Resume
+                                </span>
+                            </a>
                         </Fade>
 
                         <Fade left>
@@ -249,7 +245,7 @@ function Navbar() {
 
                         <Fade left>
                             <NavLink
-                                to='/#blog'
+                                to='/blog'
                                 smooth={true}
                                 spy='true'
                                 duration={2000}

@@ -1,5 +1,6 @@
 .education {
     min-height: 100vh;
+    padding-top: 2rem;
 }
 
 .education-body {
@@ -82,7 +83,7 @@
     box-sizing: border-box;
     padding: 1rem;
     flex: 0.35;
-    margin-top: 1rem;
+    margin: 1rem 0 0 10rem;
     pointer-events: none;
 }
 

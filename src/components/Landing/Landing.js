@@ -9,11 +9,10 @@ import { headerData } from '../../data/headerData';
 import { socialsData } from '../../data/socialsData';
 
 import {
-    FaTwitter,
     FaLinkedin,
     FaGithub,
-    FaYoutube,
-    FaBlogger,
+    FaInstagram,
+    FaFacebook
 } from 'react-icons/fa';
 
 function Landing() {
@@ -101,42 +100,29 @@ function Landing() {
                                 />
                             </a>
                         )}
-                        {socialsData.twitter && (
+                        {socialsData.facebook && (
                             <a
-                                href={socialsData.twitter}
+                                href={socialsData.facebook}
                                 target='_blank'
                                 rel='noreferrer'
                             >
-                                <FaTwitter
+                                <FaFacebook
                                     className='landing--social'
                                     style={{ color: theme.secondary }}
-                                    aria-label='Twitter'
+                                    aria-label='Facebook'
                                 />
                             </a>
                         )}
-                        {socialsData.youtube && (
+                        {socialsData.instagram && (
                             <a
-                                href={socialsData.youtube}
+                                href={socialsData.instagram}
                                 target='_blank'
                                 rel='noreferrer'
                             >
-                                <FaYoutube
+                                <FaInstagram
                                     className='landing--social'
                                     style={{ color: theme.secondary }}
-                                    aria-label='YouTube'
-                                />
-                            </a>
-                        )}
-                        {socialsData.blogger && (
-                            <a
-                                href={socialsData.blogger}
-                                target='_blank'
-                                rel='noreferrer'
-                            >
-                                <FaBlogger
-                                    className='landing--social'
-                                    style={{ color: theme.secondary }}
-                                    aria-label='Blogger'
+                                    aria-label='Instagram'
                                 />
                             </a>
                         )}
@@ -161,13 +147,13 @@ function Landing() {
                     >
                         <h6>{headerData.title}</h6>
                         <h1>{headerData.name}</h1>
-                        <p>{headerData.desciption}</p>
+                        <p>{headerData.desciption} <a style={{ color: '#FFFFFF', fontWeight: '600' }} href="/#about">Read more about me ...</a></p>
 
                         <div className='lcr-buttonContainer'>
                             {headerData.resumePdf && (
                                 <a
                                     href={headerData.resumePdf}
-                                    download='resume'
+                                    download='humaiun-resume'
                                     target='_blank'
                                     rel='noreferrer'
                                 >

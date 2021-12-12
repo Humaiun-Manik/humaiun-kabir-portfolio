@@ -19,7 +19,7 @@ function App() {
   return (
     <div className="app">
       <Router>
-        <ScrollToTop/>
+        <ScrollToTop />
         <Switch>
           <Route path="/" exact component={Main} />
           <Route path="/blog" exact component={BlogPage} />

@@ -4,6 +4,8 @@
     align-items: center;
     justify-content: flex-start;
     min-height: 60vh;
+    margin-top: 0;
+    padding-top: 0;
     padding: 2.5rem 2rem 2rem 2rem;
 }
 
@@ -79,7 +81,7 @@
 
 @media (min-width: 992px) and (max-width: 1380px) {
     .skills {
-        padding: 2rem 1rem 1rem 1rem;
+        padding: 0rem 1rem 1rem 1rem;
     }
     .skillsContainer {
         padding: 1.5rem;
